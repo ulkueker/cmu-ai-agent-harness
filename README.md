@@ -11,6 +11,28 @@ agents, including code-solving and chess-playing workflows.
 The work focuses on agent orchestration, tool interaction,
 prompt construction, execution feedback, and evaluation.
 
+## Agent Architecture
+
+The following diagram illustrates the conceptual workflow of the AI agent harness.
+
+```mermaid
+flowchart TD
+    A[Task Input] --> B[Agent Harness]
+    B --> C[Prompt Construction]
+    C --> D[LLM]
+    D --> E{Tool Call or Final Answer?}
+    E -->|Tool Call| F[Tool Execution]
+    F --> G[Observation and Feedback]
+    G --> B
+    E -->|Final Answer| H[Agent Output]
+    H --> I[Task Evaluation]
+```
+
+The agent harness manages prompt construction, model responses,
+tool execution, and feedback.
+
+This diagram is a conceptual overview of the agent workflow.
+
 ## My Contributions
 
 I worked on six Python modules covering:
@@ -25,6 +47,32 @@ The implementation changes are maintained locally.
 This repository currently shares project documentation,
 experimental observations, and evaluation results.
 
+### Implementation Areas
+
+The implementation work involved six Python modules:
+
+| Module | Technical Focus |
+|---|---|
+| `agent/base.py` | Agent execution flow, model interaction, and state management |
+| `agent/code_agent.py` | Code-solving workflows, prompt construction, and task execution |
+| `agent/chess_agent.py` | Chess agent behavior and decision-making |
+| `agent/chess_tools.py` | Chess-specific tool interaction and move validation |
+| `agent/tools.py` | Tool definitions and execution interfaces |
+| `prompts.py` | Prompt templates and agent instructions |
+
+### Engineering and Evaluation
+
+The project involved:
+
+- Implementing and debugging LLM-based agent workflows.
+- Investigating tool-calling behavior and execution feedback.
+- Experimenting with context compaction to manage long-running tasks.
+- Evaluating a Django repair task using the provided SWE-bench checks.
+- Comparing invalid-move rates across chess-agent experiments.
+- Documenting limitations, unsuccessful attempts, and verified results.
+
+The implementation is maintained locally. This public repository focuses on technical documentation and evaluation rather than redistributing the original starter code.
+
 ## Technologies & Concepts
 
 - Python
@@ -34,6 +82,25 @@ experimental observations, and evaluation results.
 - Agent Harnesses
 - SWE-bench task evaluation
 - GPT-OSS and Gemini experimentation
+
+## Chess Agent Experiment Visualization
+
+The chart compares observed invalid-move rates across four
+completed chess experiments.
+
+```mermaid
+xychart-beta
+    title "Invalid Move Rates by Model and Condition"
+    x-axis ["GPT Hidden", "GPT Shown", "Gemini Hidden", "Gemini Shown"]
+    y-axis "Invalid Move Rate (%)" 0 --> 20
+    bar [5.26, 3.03, 16.67, 5.81]
+```
+
+**Interpretation:** Both models showed lower observed invalid-move
+rates when legal moves were visible.
+
+Each condition was evaluated using one completed game.
+These results are exploratory and do not establish causality.
 
 ## Evaluation Results
 
