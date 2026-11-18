@@ -21,8 +21,9 @@ I worked on six Python modules covering:
 - Tool definitions and execution
 - Prompt management
 
-A record of the code modifications is maintained separately
-in `my-contributions.patch`.
+The implementation changes are maintained locally.
+This repository currently shares project documentation,
+experimental observations, and evaluation results.
 
 ## Technologies & Concepts
 
@@ -52,6 +53,19 @@ legal-move information.
 
 The observations are exploratory and should not be interpreted
 as statistically conclusive benchmark results.
+
+## Technical Documentation
+
+The following reports document the implementation process,
+experimental observations, and evaluation results.
+
+- [Chess Agent Observation Experiment](docs/observation-experiment.md)
+- [Token Usage and Context Compaction Analysis](docs/token-usage-analysis.md)
+- [AI Tools and Usage Disclosure](docs/AI_USAGE.md)
+
+The raw experiment trajectories are not included in this
+repository. Results are presented as documented observations
+rather than independently reproducible benchmark claims.
 
 ## Original Project & Attribution
 
