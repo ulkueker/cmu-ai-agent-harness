@@ -205,11 +205,11 @@ The modifications were developed against the upstream
 The contribution patch contains **690 added lines** and
 **141 deleted lines** across six source files.
 
-**[View implementation changes](contributions/my-contributions.patch)**
+Implementation changes are documented here at a summary level. The source-code patch is not publicly distributed while redistribution permissions for the upstream starter code remain unverified.
 
-The patch represents changes relative to the upstream starter code.
-It is provided for review and attribution; the upstream project
-remains credited to its original authors.
+The implementation changes were developed relative to the upstream
+starter code. The upstream project remains credited to its original
+authors.
 
 ## Original Project & Attribution
 
