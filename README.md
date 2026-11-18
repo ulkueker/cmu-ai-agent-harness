@@ -95,6 +95,12 @@ xychart-beta
     y-axis "Invalid Move Rate (%)" 0 --> 20
     bar [5.26, 3.03, 16.67, 5.81]
 ```
+**Chart Labels:**
+
+- **GPT Hidden:** GPT-OSS 120B — legal moves hidden.
+- **GPT Shown:** GPT-OSS 120B — legal moves visible.
+- **Gemini Hidden:** Gemini 3.5 Flash Lite — legal moves hidden.
+- **Gemini Shown:** Gemini 3.5 Flash Lite — legal moves visible.
 
 **Interpretation:** Both models showed lower observed invalid-move
 rates when legal moves were visible.
