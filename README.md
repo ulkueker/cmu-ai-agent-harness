@@ -162,6 +162,24 @@ The repository includes selected JSON records from the chess-agent and Django ag
 | Compaction v3 | [Trajectory](artifacts/django-compact-v3-trajectory.json) |
 | Gemini focused execution | [Trajectory](artifacts/django-gemini-focused-trajectory.json) |
 
+### Django Agent — Verified Repair
+
+A Gemini 3.1 Flash Lite agent generated a patch for the SWE-bench task
+`django__django-15368`. The execution recorded 53 agent steps and
+4 context compactions.
+
+| Metric | Result |
+|---|---|
+| FAIL_TO_PASS | 1/1 passed |
+| PASS_TO_PASS | 29/29 passed |
+| SWE-bench evaluation | **RESOLVED: yes** |
+
+**Supporting artifacts:**
+
+- [Agent trajectory](artifacts/django__django-15368-trajectory.json)
+- [Generated patch](artifacts/django__django-15368.patch)
+- [SWE-bench evaluation output](artifacts/django-evaluation-output.txt)
+
 These artifacts provide supporting execution records for the documented experiments. They do not, by themselves, establish independent reproducibility or statistically conclusive benchmark performance.
 
 
