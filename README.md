@@ -129,16 +129,37 @@ as statistically conclusive benchmark results.
 
 ## Technical Documentation
 
-The following reports document the implementation process,
-experimental observations, and evaluation results.
+The following reports document the implementation process, experimental observations, and evaluation results.
 
 - [Chess Agent Observation Experiment](docs/observation-experiment.md)
 - [Token Usage and Context Compaction Analysis](docs/token-usage-analysis.md)
 - [AI Tools and Usage Disclosure](docs/AI_USAGE.md)
 
-The raw experiment trajectories are not included in this
-repository. Results are presented as documented observations
-rather than independently reproducible benchmark claims.
+## Experiment Artifacts
+
+The repository includes selected JSON records from the chess-agent and Django agent experiments.
+
+### Chess Agent — GPT-OSS 120B
+
+| Experiment | Trajectory | Result |
+|---|---|---|
+| Legal moves hidden | [Trajectory](artifacts/part3-no-legal-moves-gpt-oss.json) | [Result](artifacts/part3-no-legal-moves-gpt-oss-result.json) |
+| Legal moves visible | [Trajectory](artifacts/part3-legal-moves-gpt-oss.json) | [Result](artifacts/part3-legal-moves-gpt-oss-result.json) |
+
+### Chess Agent — Gemini
+
+| Experiment | Trajectory | Result |
+|---|---|---|
+| Legal moves hidden | [Trajectory](artifacts/part3-no-legal-moves-gemini.json) | [Result](artifacts/part3-no-legal-moves-gemini-result.json) |
+| Legal moves visible | [Trajectory](artifacts/part3-legal-moves-gemini-retry.json) | [Result](artifacts/part3-legal-moves-gemini-retry-result.json) |
+
+### Django Agent — Context Management
+
+| Experiment | Trajectory |
+|---|---|
+| Gemini focused execution | [Trajectory](artifacts/django-gemini-focused-trajectory.json) |
+
+These artifacts provide supporting execution records for the documented experiments. They do not, by themselves, establish independent reproducibility or statistically conclusive benchmark performance.
 
 ## Original Project & Attribution
 
