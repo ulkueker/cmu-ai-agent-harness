@@ -153,13 +153,17 @@ The repository includes selected JSON records from the chess-agent and Django ag
 | Legal moves hidden | [Trajectory](artifacts/part3-no-legal-moves-gemini.json) | [Result](artifacts/part3-no-legal-moves-gemini-result.json) |
 | Legal moves visible | [Trajectory](artifacts/part3-legal-moves-gemini-retry.json) | [Result](artifacts/part3-legal-moves-gemini-retry-result.json) |
 
+
 ### Django Agent — Context Management
 
 | Experiment | Trajectory |
 |---|---|
+| Baseline — No compaction | [Trajectory](artifacts/django-baseline-trajectory.json) |
+| Compaction v3 | [Trajectory](artifacts/django-compact-v3-trajectory.json) |
 | Gemini focused execution | [Trajectory](artifacts/django-gemini-focused-trajectory.json) |
 
 These artifacts provide supporting execution records for the documented experiments. They do not, by themselves, establish independent reproducibility or statistically conclusive benchmark performance.
+
 
 ## Original Project & Attribution
 
