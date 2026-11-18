@@ -183,6 +183,34 @@ A Gemini 3.1 Flash Lite agent generated a patch for the SWE-bench task
 These artifacts provide supporting execution records for the documented experiments. They do not, by themselves, establish independent reproducibility or statistically conclusive benchmark performance.
 
 
+## Implementation Contributions
+
+This project includes modifications to the starter code from
+Carnegie Mellon University's 11-768 AI Agents assignment.
+
+The modifications were developed against the upstream
+`cmu-agents/assignment-1` commit [`67498d8`](https://github.com/cmu-agents/assignment-1/commit/67498d8).
+
+### Modified Source Files
+
+| File | Area |
+|---|---|
+| `src/assignment/agent/base.py` | Agent loop and context management |
+| `src/assignment/agent/chess_agent.py` | Chess agent implementation |
+| `src/assignment/agent/chess_tools.py` | Chess tools |
+| `src/assignment/agent/code_agent.py` | Code agent implementation |
+| `src/assignment/agent/tools.py` | Agent tools |
+| `src/assignment/prompts.py` | Prompt definitions |
+
+The contribution patch contains **690 added lines** and
+**141 deleted lines** across six source files.
+
+**[View implementation changes](contributions/my-contributions.patch)**
+
+The patch represents changes relative to the upstream starter code.
+It is provided for review and attribution; the upstream project
+remains credited to its original authors.
+
 ## Original Project & Attribution
 
 This independent project is based on the starter materials
